@@ -1,0 +1,33 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "Project only for testing purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "angular"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrinaluit/ang-test.git"
+  },
+  "keywords": [
+    "Angular",
+    "HTML5",
+    "CSS3",
+    "JS",
+    "Jquery",
+    "Bootstrap"
+  ],
+  "author": "Mrinal Mondal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrinaluit/ang-test/issues"
+  },
+  "homepage": "https://github.com/mrinaluit/ang-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-scss": "^1.4.0"
+  }
+}

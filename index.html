@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>Test</title>
+<!--[if lt IE 9]>
+<script src="app/html5shiv.js" >
+<![endif]-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">	
+<link rel="stylesheet" href="bootstrap.min.css">
+
+<style type="text/css">
+    .redColor{
+        background: lightgrey;
+
+    }
+
+    .greenColor{
+        background: lightblue;
+
+    }
+    .none{ display: none; }
+    .has-error{ background: red !important; }
+</style>
+
+</head>
+<body ng-controller="myController" ng-init="fname='nn'">
+
+
+
+
+<!-- start tag-->
+<div class="container-fluid">
+
+
+
+ <!--  <div style="display: none">mmmm</div>
+  <div>sssd</div>
+
+ <my-customer info="naomi"></my-customer>
+  <hr>
+  <my-customer info="igor"></my-customer>
+ -->
+
+
+
+<div class="row">
+<div class="col-md-12">
+
+
+<form name="f1" novalidate>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" name="email" ng-model="email" class="form-control" id="email" required>
+
+    <span style="color:red" ng-show="f1.$submitted && f1.email.$invalid">
+    <span ng-show="f1.email.$error.required">Email is required.</span>
+    <span ng-show="f1.email.$error.email">Invalid email address.</span>
+    </span>
+
+  </div>
+  <div class="form-group" >
+    <label for="pwd">Password:</label>
+    <input type="text" name="password" ng-model="password" class="form-control" id="pwd" validpassword required>
+    <span style="color: red" ng-show="f1.$submitted && f1.password.$invalid">
+    <span ng-show="f1.password.$error.required">Age is required</span>   
+    </span>
+    <span ng-show="f1.password.$invalid && f1.password.$dirty">Age should be greater then 3 Years</span> 
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="f1.$valid && save()">Submit</button>
+</form>
+
+
+<div ng-repeat="fruit in array1">
+<div ng-class="$odd ? 'redColor' : 'greenColor'">
+ <div ng-click="toggle($event)">{{fruit}}</div>
+ <div ng-class="none">{{array2[$index]}}</div>
+</div>
+
+</div>
+
+<!-- <div class="dad"></div> -->
+</div>
+</div>
+
+
+
+
+<table class="table">
+    <tr class="warning">
+    <td>
+    We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.    
+    </td>
+    <td>
+    We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.    
+    </td>
+    <td>
+    We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.    
+    </td>    
+    </tr>
+
+    <tr class="success">
+    <td>
+    We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.    
+    </td>
+    <td>
+    We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.    
+    </td>
+    <td>
+    We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.   
+    </td>    
+    </tr>
+
+
+   
+</table>
+
+
+<div class="row">
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="col-md-4 col-xs-4 col-sm-4">
+We want our people to keep learning because their growth propels our growth. We encourage employees to seek development both inside and outside of the office. Our Learning & Development team regularly curates and disseminates relevant trainings and materials, and we support employees' participation in conferences and classes that will empower them to perform at their best.
+</div>
+
+<div class="col-md-4 col-xs-4 col-sm-4">
+Employees and teams are regularly recognized for their contributions to the business and to the community. At a global level, we provide shared performance incentive compensation, patent awards, sales achievement awards, and other recognition programs. We also provide incentives and pay for high performance to those team members that live the TIBCO values every day.
+</div>
+
+<div class="col-md-4 col-xs-4 col-sm-4">
+We want our employees to bring their best selves to work. We know this will only happen by empowering them to have flexibility in how and when they work. Moreover, we do believe that work should be fun. We want our people to look forward to coming into the office and have created an environment where they can do that.
+</div>
+</div>
+
+
+</div>
+<!-- end end tag -->
+
+</body>
+</html>
+<!-- Script Start  -->
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="angular.min.js"></script>
+<script src="angular-route.min.js"></script>
+<script src="angular-resource.min.js"></script>
+<script src="app.js"></script>
+<!-- Script End -->
+
